@@ -8,11 +8,9 @@ function Contact() {
         </p>
         <div className="contact-grid">
           <a href="tel:+46739973859" className="contact-item">
-            <span className="contact-icon">📞</span>
             <span>073-997 38 59</span>
           </a>
           <a href="mailto:nathalie.tornbrant@m365consulting.se" className="contact-item">
-            <span className="contact-icon">✉️</span>
             <span>nathalie.tornbrant@m365consulting.se</span>
           </a>
           <a
@@ -21,7 +19,6 @@ function Contact() {
             rel="noopener noreferrer"
             className="contact-item"
           >
-            <span className="contact-icon">💼</span>
             <span>LinkedIn</span>
           </a>
         </div>

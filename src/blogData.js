@@ -8,7 +8,7 @@ const blogPosts = [
     content: [
       { type: 'p', text: 'Temat för evenemanget var "New Era, Next Mindset" — en uppmaning att tänka storskaligt, tänka innovativt och forma framtidens utveckling under en period av snabb teknologisk utveckling.' },
       { type: 'p', text: 'Eventet lockade många deltagare och presenterade intressanta föreläsare från olika delar av världen, inklusive grundare, investerare, företagsledare och beslutsfattare inom teknik, entreprenörskap och investeringar.' },
-      { type: 'quote', text: 'Dagarna gick för fort och jag önskar att det var fler dagar för att hinna med allt 😅' },
+      { type: 'quote', text: 'Dagarna gick för fort och jag önskar att det var fler dagar för att hinna med allt.' },
       { type: 'h3', text: 'Arenans komponenter' },
       { type: 'ul', items: [
         'Inspirerande keynotes och panelsamtal om AI, innovation, hållbarhet, ledarskap och framtidens affärsmodeller',
@@ -23,7 +23,7 @@ const blogPosts = [
   },
   {
     slug: 'ai-ordlista',
-    title: 'AI ordlista 🧠',
+    title: 'AI ordlista',
     date: '2 februari 2026',
     category: 'AI',
     excerpt: 'AI-terminologi kan verka förvirrande. Här är 16 centrala begrepp som hjälper dig förstå AI-världen.',
@@ -91,7 +91,7 @@ const blogPosts = [
   },
   {
     slug: 'mina-microsoft-ignite-spaningar',
-    title: 'Mina Microsoft Ignite spaningar 👀',
+    title: 'Mina Microsoft Ignite spaningar',
     date: '18 november 2025',
     category: 'Events',
     excerpt: 'Att följa Microsofts utveckling är som att gå in i en godisbutik med 1000 olika sorter. Här är mina utvalda sessioner.',
@@ -105,12 +105,12 @@ const blogPosts = [
         'Drive Copilot adoption with strategies that scale — relevant för kommande AI-strateg-diplom',
         'M365 Copilot Agents: Powering retail & consumer goods partner success — intressanta affärsfall',
       ]},
-      { type: 'p', text: 'Jag lovar att dela utvärderingar av sessionerna senare. Vilken spännande vecka! 🔥' },
+      { type: 'p', text: 'Jag lovar att dela utvärderingar av sessionerna senare. Vilken spännande vecka!' },
     ],
   },
   {
     slug: 'microsoft-ignite-2025-ai-eran-tar-fart',
-    title: 'Microsoft Ignite 2025 — AI-eran tar fart 🔥',
+    title: 'Microsoft Ignite 2025 — AI-eran tar fart',
     date: '17 november 2025',
     category: 'Nyheter',
     excerpt: 'Tusentals IT-proffs, utvecklare och företagsledare samlades på Moscone Center i San Francisco.',
