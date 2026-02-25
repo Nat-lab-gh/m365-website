@@ -85,10 +85,14 @@ section {
 }
 
 .navbar-logo {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1e293b;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+}
+
+.navbar-logo-img {
+  height: 36px;
+  width: auto;
 }
 
 .navbar-links {

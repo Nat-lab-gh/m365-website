@@ -16,7 +16,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <a href="#hem" className="navbar-logo">M365 Consulting</a>
+        <a href="#hem" className="navbar-logo">
+          <img src="/logo.png" alt="Modern 365 Consulting" className="navbar-logo-img" />
+        </a>
         <button
           className={`navbar-toggle ${menuOpen ? 'open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
