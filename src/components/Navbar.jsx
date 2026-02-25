@@ -9,6 +9,7 @@ function Navbar() {
     { href: '#tjanster', label: 'Tjänster' },
     { href: '#min-metod', label: 'Min metod' },
     { href: '#omdomen', label: 'Omdömen' },
+    { href: '#blogg', label: 'Blogg' },
     { href: '#kontakt', label: 'Kontakt' },
   ]
 
