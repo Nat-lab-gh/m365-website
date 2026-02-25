@@ -9,6 +9,7 @@ import Blog from './components/Blog'
 import BlogPost from './components/BlogPost'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Chatbot from './components/Chatbot'
 
 function App() {
   const [activePost, setActivePost] = useState(null)
@@ -30,6 +31,7 @@ function App() {
           <BlogPost slug={activePost} onClose={closePost} />
         </main>
         <Footer />
+        <Chatbot />
       </>
     )
   }
@@ -47,6 +49,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </>
   )
 }
