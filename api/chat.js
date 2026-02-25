@@ -71,7 +71,10 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ reply: text })
   } catch (error) {
-    console.error('Chat API error:', error)
-    return res.status(500).json({ error: 'Något gick fel. Försök igen.' })
+    console.error('Chat API error:', error?.message || error)
+    return res.status(500).json({
+      error: 'Något gick fel. Försök igen.',
+      detail: error?.message || String(error),
+    })
   }
 }
