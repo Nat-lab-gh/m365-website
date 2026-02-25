@@ -21,6 +21,14 @@ function Contact() {
           >
             <span>LinkedIn</span>
           </a>
+          <a
+            href="https://www.instagram.com/modern365consulting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item"
+          >
+            <span>Instagram</span>
+          </a>
         </div>
         <div className="contact-cta">
           <a href="mailto:nathalie.tornbrant@m365consulting.se" className="btn btn-primary">
