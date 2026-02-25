@@ -1,9 +1,3 @@
-import Anthropic from '@anthropic-ai/sdk'
-
-const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
-
 const SYSTEM_PROMPT = `Du är en vänlig och hjälpsam assistent på M365 Consultings webbplats. Du hjälper besökare att förstå vilka tjänster som erbjuds och svarar på frågor om verksamheten.
 
 Svara alltid på svenska. Var professionell men varm och tillgänglig i tonen.
@@ -57,17 +51,32 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Messages array required' })
     }
 
-    const response = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 1024,
-      system: SYSTEM_PROMPT,
-      messages: messages.map(m => ({
-        role: m.role,
-        content: m.content,
-      })),
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1024,
+        system: SYSTEM_PROMPT,
+        messages: messages.map(m => ({
+          role: m.role,
+          content: m.content,
+        })),
+      }),
     })
 
-    const text = response.content[0]?.text || ''
+    const data = await response.json()
+
+    if (!response.ok) {
+      console.error('Claude API error:', data)
+      return res.status(500).json({ error: 'Något gick fel. Försök igen.' })
+    }
+
+    const text = data.content?.[0]?.text || ''
 
     return res.status(200).json({ reply: text })
   } catch (error) {
